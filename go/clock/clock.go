@@ -21,14 +21,14 @@ func New(hours, minutes int) Clock {
 
 	for minutes < 0 { // if minutes is less than zero, then add 60 mins to make it positive
 		minutes += 60 // add 60 mins until it is more than 0
-		hours -- // minuses one hour with each iteration as it is a negative value
+		hours--       // minuses one hour with each iteration as it is a negative value
 	}
 	for hours < 0 { // if hours is less than zero, then add 24 to make it positive
 		hours += 24
 	}
 	for minutes >= 60 {
 		minutes -= 60 // minus 60 in each loop until it is less than 60
-		hours++ // adds one to each iteration
+		hours++       // adds one to each iteration
 	}
 	if hours >= 24 {
 		hours %= 24 //remainder to roll into hours
